@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TalentProof Protocol — Sovereign Developer Proof &amp; Milestone Escrow</title>
+  <link rel="manifest" href="manifest.json">
+  <meta name="theme-color" content="#0D1117">
+  <meta name="description" content="Sovereign 2-way developer proof attestation, anti-AI-spam gatekeeper, and test-locked USD milestone escrow kernel.">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    body { background-color: #0d1117; color: #c9d1d9; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif; }
+    input, textarea, select { background-color: #161b22 !important; border-color: #30363d !important; color: #f0f6fc !important; }
+    input:focus, textarea:focus { border-color: #58a6ff !important; outline: none; }
+  </style>
+</head>
+<body class="p-4 md:p-8 antialiased">
+  <div class="max-w-6xl mx-auto">
+    
+    <!-- Top Header: Quiet Chrome -->
+    <header class="flex flex-col md:flex-row md:items-center justify-between pb-6 border-b border-[#21262d] gap-4">
+      <div>
+        <div class="flex items-center gap-2">
+          <span class="w-3 h-3 rounded-full bg-[#2ea043]"></span>
+          <h1 class="text-2xl font-semibold text-[#f0f6fc] tracking-tight">TalentProof Protocol</h1>
+          <span class="text-xs font-mono bg-[#161b22] text-[#8b949e] border border-[#30363d] px-2 py-0.5 rounded">v1.0.0 Web/PWA</span>
+        </div>
+        <p class="text-xs text-[#8b949e] mt-1">Sovereign 2-way developer proof attestation, anti-AI-spam gatekeeper &amp; milestone escrow rails.</p>
+      </div>
+      <div class="flex items-center gap-3">
+        <a href="https://github.com/Amz34/talentproof-protocol" target="_blank" class="text-xs font-medium bg-[#161b22] hover:bg-[#21262d] text-[#c9d1d9] border border-[#30363d] px-3 py-1.5 rounded transition">
+          GitHub Repository
+        </a>
+        <a href="https://github.com/Amz34/talentproof-protocol/issues/new/choose" target="_blank" class="text-xs font-medium bg-[#238636] hover:bg-[#2ea043] text-white px-3 py-1.5 rounded transition">
+          Open Marketplace Issue
+        </a>
+      </div>
+    </header>
+
+    <!-- Global Pain Point Banner (Unslop Craft) -->
+    <div class="my-6 p-4 rounded-lg bg-[#161b22] border border-[#30363d] text-xs text-[#8b949e]">
+      <strong class="text-[#f0f6fc]">The Protocol Solution:</strong> Replacing 20–30% recruiter agency margins and AI resume spam with objective code entropy, test coverage, and test-locked USD milestone escrows.
+    </div>
+
+    <!-- Dual Studio Grid -->
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+
+      <!-- Column 1: Developer Proof Attestation Studio -->
+      <section class="bg-[#161b22] border border-[#30363d] rounded-lg p-6 shadow-sm">
+        <h2 class="text-base font-semibold text-[#f0f6fc] mb-1">Developer Proof Attestation Studio</h2>
+        <p class="text-xs text-[#8b949e] mb-5">Audit commit volume, CI/CD presence, and test coverage to benchmark fair-market USD contractor rates.</p>
+
+        <div class="space-y-4">
+          <div>
+            <label class="block text-xs text-[#8b949e] font-medium mb-1">GitHub Username</label>
+            <input id="gh_handle" type="text" value="Amz34" class="w-full rounded px-3 py-2 text-sm border">
+          </div>
+
+          <div>
+            <label class="block text-xs text-[#8b949e] font-medium mb-1">Total Verified Production Commits</label>
+            <input id="commit_count" type="number" value="1250" class="w-full rounded px-3 py-2 text-sm border">
+          </div>
+
+          <div class="flex items-center gap-6 pt-1">
+            <label class="flex items-center gap-2 text-xs text-[#c9d1d9] cursor-pointer">
+              <input id="has_ci" type="checkbox" checked class="rounded"> CI/CD Automated Pipelines
+            </label>
+            <label class="flex items-center gap-2 text-xs text-[#c9d1d9] cursor-pointer">
+              <input id="has_tests" type="checkbox" checked class="rounded"> Production Unit / E2E Tests
+            </label>
+          </div>
+
+          <button onclick="generateDevProof()" class="w-full bg-[#238636] hover:bg-[#2ea043] text-white text-sm font-medium py-2 rounded transition">
+            Generate Cryptographic DevProof Badge
+          </button>
+        </div>
+
+        <!-- Live Badge Output -->
+        <div id="badge_output_container" class="mt-6 pt-6 border-t border-[#30363d]">
+          <p class="text-xs text-[#8b949e] mb-2 font-medium">Verified Dark-Mode SVG Badge Preview:</p>
+          <div id="badge_preview" class="border border-[#30363d] rounded bg-[#0d1117] p-2 flex justify-center overflow-x-auto"></div>
+          
+          <div class="flex items-center gap-2 mt-3">
+            <button onclick="copySvgMarkup()" class="text-xs bg-[#21262d] hover:bg-[#30363d] text-[#c9d1d9] px-3 py-1.5 rounded transition">
+              Copy SVG Code
+            </button>
+            <button onclick="copyMarkdownCode()" class="text-xs bg-[#21262d] hover:bg-[#30363d] text-[#c9d1d9] px-3 py-1.5 rounded transition">
+              Copy GitHub Embed Markdown
+            </button>
+          </div>
+        </div>
+      </section>
+
+      <!-- Column 2: Bilateral Milestone Escrow Generator -->
+      <section class="bg-[#161b22] border border-[#30363d] rounded-lg p-6 shadow-sm">
+        <h2 class="text-base font-semibold text-[#f0f6fc] mb-1">Bilateral Milestone Escrow Generator</h2>
+        <p class="text-xs text-[#8b949e] mb-5">Structure deliverable milestones locked to automated test suite assertion passes in USD.</p>
+
+        <div class="space-y-4">
+          <div class="grid grid-cols-2 gap-3">
+            <div>
+              <label class="block text-xs text-[#8b949e] font-medium mb-1">Client / Enterprise Buyer</label>
+              <input id="contract_client" type="text" value="Apex Retail International" class="w-full rounded px-3 py-2 text-sm border">
+            </div>
+            <div>
+              <label class="block text-xs text-[#8b949e] font-medium mb-1">Lead Software Architect</label>
+              <input id="contract_dev" type="text" value="Amz34" class="w-full rounded px-3 py-2 text-sm border">
+            </div>
+          </div>
+
+          <div>
+            <label class="block text-xs text-[#8b949e] font-medium mb-1">Project Architecture Scope</label>
+            <input id="contract_scope" type="text" value="End-to-end commerce storefront, Flutter mobile apps, and Stripe payment gateway" class="w-full rounded px-3 py-2 text-sm border">
+          </div>
+
+          <!-- Milestones Setup -->
+          <div class="p-3 bg-[#0d1117] border border-[#30363d] rounded space-y-3">
+            <div class="flex items-center justify-between text-xs font-medium text-[#8b949e]">
+              <span>Milestone 1</span>
+              <span>Acceptance: pytest &ge; 85%</span>
+            </div>
+            <div class="grid grid-cols-3 gap-2">
+              <input id="m1_title" type="text" value="Core Backend &amp; Data Schemas" class="col-span-2 rounded px-2.5 py-1.5 text-xs border">
+              <input id="m1_budget" type="number" value="2000" class="rounded px-2.5 py-1.5 text-xs border">
+            </div>
+
+            <div class="flex items-center justify-between text-xs font-medium text-[#8b949e] pt-1">
+              <span>Milestone 2</span>
+              <span>Acceptance: npm run test:e2e exits 0</span>
+            </div>
+            <div class="grid grid-cols-3 gap-2">
+              <input id="m2_title" type="text" value="Mobile Apps &amp; Checkout Flow" class="col-span-2 rounded px-2.5 py-1.5 text-xs border">
+              <input id="m2_budget" type="number" value="3000" class="rounded px-2.5 py-1.5 text-xs border">
+            </div>
+          </div>
+
+          <button onclick="generateContract()" class="w-full bg-[#1f6feb] hover:bg-[#388bfd] text-white text-sm font-medium py-2 rounded transition">
+            Generate Bilateral Milestone Agreement
+          </button>
+        </div>
+
+        <!-- Contract Output -->
+        <div id="contract_output_container" class="mt-6 pt-6 border-t border-[#30363d] hidden">
+          <div class="flex items-center justify-between mb-2">
+            <p class="text-xs text-[#8b949e] font-medium">Sealed Agreement Markdown:</p>
+            <button onclick="copyContractMarkdown()" class="text-xs text-[#58a6ff] hover:underline">
+              Copy Agreement
+            </button>
+          </div>
+          <pre id="contract_output_text" class="bg-[#0d1117] border border-[#30363d] p-3 rounded text-xs text-[#c9d1d9] font-mono overflow-x-auto max-h-56"></pre>
+        </div>
+      </section>
+
+    </div>
+
+    <!-- Toast Notification -->
+    <div id="toast_notice" class="fixed bottom-6 right-6 bg-[#238636] text-white text-xs px-4 py-2 rounded shadow-lg transition opacity-0 pointer-events-none">
+      Copied to clipboard!
+    </div>
+
+    <!-- Quiet Footer -->
+    <footer class="mt-12 text-center text-xs text-[#6e7681] border-t border-[#21262d] pt-6">
+      TalentProof Protocol &bull; Maintained by <a href="https://github.com/Amz34" target="_blank" class="text-[#58a6ff] hover:underline">Aamir Zameer [Az.]</a> &bull; Apache 2.0 Open Source
+    </footer>
+  </div>
+
+  <script src="app.js"></script>
+  <script>
+    // Initial badge render on load
+    window.addEventListener('DOMContentLoaded', () => {
+      generateDevProof();
+    });
+  </script>
+</body>
+</html>

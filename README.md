@@ -5,6 +5,7 @@
 </p>
 
 <p align="center">
+  <a href="https://amz34.github.io/talentproof-protocol"><img src="https://img.shields.io/badge/Live_Web_App-amz34.github.io%2Ftalentproof--protocol-238636?style=flat-square&logo=githubpages&logoColor=white" alt="Live Web App" /></a>
   <a href="https://github.com/Amz34/talentproof-protocol/actions"><img src="https://img.shields.io/badge/CI-Passing-238636?style=flat-square&logo=github-actions&logoColor=white" alt="CI Status" /></a>
   <a href="https://github.com/Amz34/talentproof-protocol/releases"><img src="https://img.shields.io/badge/version-1.0.0--kernel-blue?style=flat-square" alt="Version" /></a>
   <a href="https://github.com/Amz34/talentproof-protocol/blob/main/LICENSE"><img src="https://img.shields.io/badge/license-Apache--2.0-blue?style=flat-square" alt="License" /></a>
