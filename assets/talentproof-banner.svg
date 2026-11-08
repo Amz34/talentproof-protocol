@@ -1,54 +1,40 @@
-<svg width="1200" height="340" viewBox="0 0 1200 340" fill="none" xmlns="http://www.w3.org/2000/svg">
-  <defs>
-    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#0B0F19" />
-      <stop offset="50%" stop-color="#0F172A" />
-      <stop offset="100%" stop-color="#040D1A" />
-    </linearGradient>
-    <linearGradient id="accent" x1="0%" y1="0%" x2="100%" y2="0%">
-      <stop offset="0%" stop-color="#10B981" />
-      <stop offset="50%" stop-color="#06B6D4" />
-      <stop offset="100%" stop-color="#3B82F6" />
-    </linearGradient>
-  </defs>
-
-  <!-- Background -->
-  <rect width="1200" height="340" rx="16" fill="url(#bg)" stroke="#1E293B" stroke-width="2"/>
+<svg width="1200" height="300" viewBox="0 0 1200 300" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Subtle dark matte surface (zero glows, zero neon blobs) -->
+  <rect width="1200" height="300" rx="8" fill="#0D1117" stroke="#30363D" stroke-width="1"/>
   
-  <!-- Subtle Grid Accent -->
-  <path d="M 0 85 L 1200 85 M 0 170 L 1200 170 M 0 255 L 1200 255" stroke="#1E293B" stroke-dasharray="4 4" opacity="0.4"/>
-  <path d="M 300 0 L 300 340 M 600 0 L 600 340 M 900 0 L 900 340" stroke="#1E293B" stroke-dasharray="4 4" opacity="0.4"/>
+  <!-- Subtle structural technical hairline -->
+  <line x1="60" y1="210" x2="1140" y2="210" stroke="#21262D" stroke-width="1"/>
 
-  <!-- Badge Top -->
-  <rect x="60" y="45" width="220" height="32" rx="16" fill="#064E3B" stroke="#059669" stroke-width="1.2"/>
-  <text x="170" y="66" fill="#34D399" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="12" font-weight="700" text-anchor="middle" letter-spacing="1">SOVEREIGN PROTOCOL</text>
+  <!-- Protocol Tag -->
+  <rect x="60" y="44" width="168" height="26" rx="4" fill="#161B22" stroke="#30363D" stroke-width="1"/>
+  <circle cx="74" cy="57" r="4" fill="#2EA043"/>
+  <text x="86" y="61" fill="#8B949E" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="11" font-weight="600" letter-spacing="0.5">TALENTPROOF KERNEL</text>
 
-  <!-- Title -->
-  <text x="60" y="130" fill="#FFFFFF" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="44" font-weight="900" letter-spacing="-1">TalentProof Protocol</text>
-  
-  <!-- Subtitle Accent Line -->
-  <rect x="60" y="150" width="480" height="4" rx="2" fill="url(#accent)"/>
+  <!-- Title (Refined font weight 500, calm hierarchy) -->
+  <text x="60" y="118" fill="#F0F6FC" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="38" font-weight="600" letter-spacing="-0.5">TalentProof Protocol</text>
 
-  <!-- Tagline -->
-  <text x="60" y="195" fill="#94A3B8" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="18" font-weight="400">
-    Bilateral Developer Proof Attestation, Anti-AI-Spam Gatekeeper &amp; Milestone Escrow Kernel
+  <!-- Product Explanation Narrative (Deliberate, unslop craft) -->
+  <text x="60" y="152" fill="#8B949E" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="16" font-weight="400">
+    Bilateral developer proof attestation, anti-AI-spam gatekeeper, and milestone escrow kernel.
   </text>
-  <text x="60" y="225" fill="#64748B" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="15" font-weight="400">
-    Replacing 20% recruiter margins with deterministic code verification, fair USD rates, and zero-leak contracts.
+  <text x="60" y="178" fill="#6E7681" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="14" font-weight="400">
+    Deterministic code verification and fair-market USD milestone agreements with zero recruiter middleman fees.
   </text>
 
-  <!-- Metric Badges Bottom -->
-  <g transform="translate(60, 260)">
-    <!-- Pill 1 -->
-    <rect width="180" height="38" rx="8" fill="#1E293B" stroke="#334155"/>
-    <text x="90" y="24" fill="#38BDF8" font-family="monospace" font-size="13" font-weight="600" text-anchor="middle">⚡ Zero C-Deps</text>
+  <!-- Technical Spec Footprint (Subtle muted pills) -->
+  <g transform="translate(60, 234)">
+    <text x="0" y="16" fill="#8B949E" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="13">Core Invariants:</text>
+    
+    <rect x="120" y="0" width="130" height="26" rx="4" fill="#161B22" stroke="#30363D" stroke-width="1"/>
+    <text x="185" y="17" fill="#C9D1D9" font-family="ui-monospace, SFMono-Regular, monospace" font-size="11" font-weight="500" text-anchor="middle">Zero C-Deps</text>
 
-    <!-- Pill 2 -->
-    <rect x="200" width="210" height="38" rx="8" fill="#1E293B" stroke="#334155"/>
-    <text x="305" y="24" fill="#34D399" font-family="monospace" font-size="13" font-weight="600" text-anchor="middle">🛡️ SHA-256 Attested</text>
+    <rect x="262" y="0" width="160" height="26" rx="4" fill="#161B22" stroke="#30363D" stroke-width="1"/>
+    <text x="342" y="17" fill="#C9D1D9" font-family="ui-monospace, SFMono-Regular, monospace" font-size="11" font-weight="500" text-anchor="middle">SHA-256 Attestation</text>
 
-    <!-- Pill 3 -->
-    <rect x="430" width="220" height="38" rx="8" fill="#1E293B" stroke="#334155"/>
-    <text x="540" y="24" fill="#FBBF24" font-family="monospace" font-size="13" font-weight="600" text-anchor="middle">💵 USD Escrow Rails</text>
+    <rect x="434" y="0" width="160" height="26" rx="4" fill="#161B22" stroke="#30363D" stroke-width="1"/>
+    <text x="514" y="17" fill="#C9D1D9" font-family="ui-monospace, SFMono-Regular, monospace" font-size="11" font-weight="500" text-anchor="middle">USD Escrow Rails</text>
+
+    <rect x="606" y="0" width="170" height="26" rx="4" fill="#161B22" stroke="#30363D" stroke-width="1"/>
+    <text x="691" y="17" fill="#C9D1D9" font-family="ui-monospace, SFMono-Regular, monospace" font-size="11" font-weight="500" text-anchor="middle">Anti-AI-Spam Filter</text>
   </g>
 </svg>

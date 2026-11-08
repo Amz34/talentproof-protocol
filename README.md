@@ -5,99 +5,97 @@
 </p>
 
 <p align="center">
-  <a href="https://github.com/Amz34/talentproof-protocol/actions"><img src="https://img.shields.io/badge/CI-Passing-238636?style=for-the-badge&logo=github-actions&logoColor=white" alt="CI Status" /></a>
-  <a href="https://github.com/Amz34/talentproof-protocol/releases"><img src="https://img.shields.io/badge/Version-1.0.0--Kernel-blue?style=for-the-badge" alt="Version" /></a>
-  <a href="https://github.com/Amz34/talentproof-protocol/blob/main/LICENSE"><img src="https://img.shields.io/badge/License-Apache--2.0-orange?style=for-the-badge" alt="License" /></a>
-  <a href="https://github.com/Amz34/talentproof-protocol/stargazers"><img src="https://img.shields.io/github/stars/Amz34/talentproof-protocol?style=for-the-badge&color=yellow" alt="GitHub Stars" /></a>
+  <a href="https://github.com/Amz34/talentproof-protocol/actions"><img src="https://img.shields.io/badge/CI-Passing-238636?style=flat-square&logo=github-actions&logoColor=white" alt="CI Status" /></a>
+  <a href="https://github.com/Amz34/talentproof-protocol/releases"><img src="https://img.shields.io/badge/version-1.0.0--kernel-blue?style=flat-square" alt="Version" /></a>
+  <a href="https://github.com/Amz34/talentproof-protocol/blob/main/LICENSE"><img src="https://img.shields.io/badge/license-Apache--2.0-blue?style=flat-square" alt="License" /></a>
+  <a href="https://github.com/Amz34/talentproof-protocol/stargazers"><img src="https://img.shields.io/github/stars/Amz34/talentproof-protocol?style=flat-square&color=blue" alt="GitHub Stars" /></a>
 </p>
 
 ---
 
-## ⚡ The Global Pain Point: Why Modern Tech Hiring & Freelancing is Broken
+## The Core Problem
 
-The **\$500 Billion** global developer recruitment and contracting market is currently collapsing under two opposing friction forces:
+The global tech recruiting and contractor ecosystem suffers from structural friction on both sides:
 
 ```
   ┌────────────────────────────────────────────────────────────────────────────────────────┐
-  │                           THE 2-WAY HIRING FAILURE CYCLE                               │
+  │                           BILATERAL MARKETPLACE FRICTION                               │
   ├───────────────────────────────────────────┬────────────────────────────────────────────┤
   │       FOR RECRUITERS & FOUNDERS           │         FOR DEVELOPERS & SEEKERS           │
   ├───────────────────────────────────────────┼────────────────────────────────────────────┤
-  │ ❌ 500+ AI-generated spam applications/day│ ❌ 95% applications ghosted with zero feedback│
-  │ ❌ Fake portfolios & inflated self-claims │ ❌ Unpaid 20-hour take-home test exploitation│
-  │ ❌ 20% to 30% recruiter agency margins    │ ❌ Delayed milestone payouts & payment risk│
-  │ ❌ Lack of objective, deterministic proof │ ❌ Closed platform lock-in (Upwork/Toptal) │
+  │ • High volume of automated AI resume spam │ • Silent rejections with zero feedback     │
+  │ • Self-reported, unverifiable claims      │ • Unpaid take-home assignments             │
+  │ • 20% to 30% agency placement margins     │ • Delayed milestone releases               │
+  │ • Lack of deterministic technical signals │ • Platform lock-in and high platform fees  │
   └───────────────────────────────────────────┴────────────────────────────────────────────┘
 ```
 
-**TalentProof Protocol** replaces opaque resumes and predatory middlemen with **cryptographic proof of execution, deterministic bilateral matching, and milestone-locked escrow contracts**.
+**TalentProof Protocol** replaces resumes and intermediaries with deterministic code verification, bilateral technical matching, and test-locked milestone escrow agreements.
 
 ---
 
-## 🏛️ System Architecture
+## System Architecture
 
 ```mermaid
 flowchart TD
-    subgraph TalentLayer["1. Talent & Seeker Layer"]
-        DevProfile["Developer GitHub & Repo Signals"]
-        ProofGen["Cryptographic Proof & Skill Attestation Engine"]
+    subgraph TalentLayer["1. Developer Signal Layer"]
+        DevProfile["GitHub Commit History & Test Signals"]
+        ProofGen["Attestation Engine"]
         DevProfile --> ProofGen
-        ProofGen --> ProofCard["Verified DevProof Card (SVG / JSON / Markdown)"]
+        ProofGen --> ProofCard["Verified DevProof Digest (SHA-256)"]
     end
 
-    subgraph RecruiterLayer["2. Recruiter & Enterprise Buyer Layer"]
-        JobSpec["Architecture & Milestone Requisition Spec"]
-        BudgetLock["Milestone Escrow Contract Generator (USD)"]
+    subgraph RecruiterLayer["2. Requisition & Milestone Layer"]
+        JobSpec["Architecture Requisition Specification"]
+        BudgetLock["Milestone Escrow Contract Generator"]
         JobSpec --> BudgetLock
         BudgetLock --> VerifiedSpec["Cryptographic Requisition Proof"]
     end
 
-    subgraph CoreKernel["3. TalentProof Kernel & AI Matching"]
-        SemanticMatcher["Deterministic AST & Vector Semantic Matcher"]
-        AntiSpamFilter["Anti-AI-Spam Heuristic Gatekeeper"]
+    subgraph CoreKernel["3. Matching Kernel"]
+        SemanticMatcher["Deterministic Compatibility Evaluator"]
+        AntiSpamFilter["Submission Authenticity Gate"]
         ProofCard --> AntiSpamFilter
         VerifiedSpec --> SemanticMatcher
         AntiSpamFilter --> SemanticMatcher
-        SemanticMatcher --> MatchScore["Bilateral Compatibility & Trust Index"]
+        SemanticMatcher --> MatchScore["Trust Index & Rate Alignment"]
     end
 
-    subgraph DistributionMonetization["4. Growth, Viral & Monetization Rails"]
-        TerminalCLI["Interactive Python / Rich Terminal CLI"]
-        EmbeddedUI["Zero-Dependency Lightweight Web Dashboard (HTML/Tailwind)"]
-        GitHubActions["Reusable GitHub Action for Auto-Vetting Applicants"]
-        EnterpriseAPI["Hosted SaaS Gateway & Escrow Rails (Monetize)"]
+    subgraph DistributionMonetization["4. Interfaces & Enterprise Rails"]
+        TerminalCLI["Terminal CLI (Zero C-Dependencies)"]
+        EmbeddedUI["Local Web Dashboard"]
+        EnterpriseAPI["Hosted Escrow & Verification Gateway"]
         MatchScore --> TerminalCLI
         MatchScore --> EmbeddedUI
-        MatchScore --> GitHubActions
         EmbeddedUI --> EnterpriseAPI
     end
 ```
 
 ---
 
-## 🚀 60-Second Quickstart
+## Quickstart
 
-TalentProof is built with **zero heavy C dependencies**. Runs anywhere Python 3.10+ is installed.
+TalentProof requires only Python 3.10 or higher. No external services or compiled extensions required.
 
-### 1. Clone & Run the Interactive Simulation
+### 1. Installation & Simulation
 ```bash
 git clone https://github.com/Amz34/talentproof-protocol.git
 cd talentproof-protocol
 
-# Run end-to-end interactive demo
+# Run end-to-end interactive simulation
 python3 -m talentproof.cli.main demo
 ```
 
-### 2. Generate Your Cryptographic DevProof Card
+### 2. Generate Developer Attestation
 ```bash
 # Output JSON attestation
 python3 -m talentproof.cli.main proof Amz34
 
-# Generate dynamic SVG badge for your GitHub profile
+# Generate SVG badge markup
 python3 -m talentproof.cli.main proof Amz34 --svg > profile_badge.svg
 ```
 
-### 3. Generate a Bilateral Milestone Escrow Contract
+### 3. Generate Milestone Escrow Agreement
 ```bash
 python3 -m talentproof.cli.main contract \
   --client "Apex Enterprises" \
@@ -106,61 +104,56 @@ python3 -m talentproof.cli.main contract \
   --budget 5000
 ```
 
-### 4. Launch the Zero-Dependency Local Web Dashboard
+### 4. Local Web Dashboard
 ```bash
 python3 -m talentproof.cli.main serve
-# Open http://127.0.0.1:8089 in your browser!
+# Open http://127.0.0.1:8089 in your browser
 ```
 
 ---
 
-## 🛡️ Core Pillars
+## Core Modules
 
-### 1. Cryptographic DevProof (`talentproof.core.attestation`)
-Evaluates code entropy, CI/CD pipeline rigor, test coverage, and commit frequency to output an objective **Trust Index (0-100)** and a **Fair Market USD Rate**. No self-reporting; code commits never lie.
+### 1. Developer Proof Attestation (`talentproof.core.attestation`)
+Evaluates code entropy, CI/CD pipeline configuration, test coverage, and commit frequency to output an objective **Trust Index (0-100)** and estimated **Fair Market USD Rate**.
 
-### 2. Anti-AI-Spam Gatekeeper (`talentproof.core.anti_spam`)
-Heuristically analyzes candidate cover notes and issue submissions. Filters generic LLM boilerplate (*"In today's fast-paced digital world..."*) while prioritizing verifiable repository links and architectural metric statements.
+### 2. Submission Authenticity Gate (`talentproof.core.anti_spam`)
+Heuristically filters template responses and automated application text, prioritizing verifiable repository links, production metrics, and concrete technical terminology.
 
-### 3. Bilateral Semantic Matcher (`talentproof.core.matcher`)
-Matches developer proofs against technical requisition specs. Produces transparent gap analysis (*Surplus, Match, Deficit*) and budget compatibility without algorithmic recruiter bias.
+### 3. Bilateral Matchmaking Kernel (`talentproof.core.matcher`)
+Matches developer attestations against architecture specifications, outputting explicit gap annotations (*Surplus, Match, Deficit*) and budget alignment.
 
 ### 4. Milestone Escrow Rails (`talentproof.core.escrow_contract`)
-Compiles tamper-evident agreements where each milestone is locked to deterministic test assertions (e.g., `pytest tests/ && npm run test:e2e`). Funds are safeguarded in USD until acceptance tests pass.
+Compiles bilateral agreements where deliverable milestones are locked to automated test criteria (e.g., `pytest tests/ && npm test`). Payout releases require test suite execution.
 
 ---
 
-## 💎 Monetization & Enterprise Roadmap
+## Feature Comparison & Service Tiers
 
-TalentProof follows a proven **Open Core + Sovereign Hosted Rails** monetization model:
-
-| Capability | Open-Source Core (Free) | Pro Builder ($19/mo) | Enterprise / SaaS Platform |
+| Capability | Open-Source Core | Pro Developer ($19/mo) | Enterprise / SaaS Platform |
 | :--- | :---: | :---: | :---: |
-| **DevProof CLI & Attestation** | ✅ Unlimited | ✅ Unlimited | ✅ Automated Webhooks |
-| **SVG Profile Badges** | ✅ Included | ✅ Cryptographic Signature | ✅ White-Label Branded |
-| **Anti-Spam Filter** | ✅ Local Engine | ✅ GitHub Action Integration | ✅ Hosted Candidate Gatekeeper |
-| **Milestone Contract Generator** | ✅ Markdown Export | ✅ PDF + Legal Templates | ✅ Smart Contract / Fiat Escrow |
-| **Bilateral Matchmaking** | ✅ CLI / Local UI | ✅ Direct Feed Syndication | ✅ Private Talent Pool & Concierge |
-| **Platform Escrow Fee** | **0%** | **0%** | **2.5% to 5%** (vs 20% Upwork) |
+| **DevProof CLI & Attestation** | Unlimited | Unlimited | Automated CI Webhooks |
+| **Profile Badges** | SVG Export | Cryptographically Signed | Custom Enterprise Theme |
+| **Submission Authenticity Gate** | Local Engine | GitHub Action Integration | Hosted Intake Gatekeeper |
+| **Milestone Contract Generator** | Markdown Export | PDF + Legal Standard Formats | Automated Fiat / Escrow Lock |
+| **Bilateral Matchmaking** | CLI / Local Web UI | Feed Syndication | Private Concierge Matching |
+| **Platform Escrow Fee** | **0%** | **0%** | **2.5% to 5%** (vs 20% Industry Standard) |
 
 ---
 
-## 🧪 Verification & Test Suite
+## Test Verification
 
-Run the comprehensive unit test suite:
+Run the unit test suite:
 ```bash
 python3 -m unittest discover -s tests -v
 ```
 
-All 5 core suites pass deterministically in under 20 milliseconds.
+All 5 core suites pass deterministically.
 
 ---
 
-## 🤝 Community & Collaboration
+## License & Contributing
 
-We are building the future of sovereign, tamper-proof engineering work.
-- **Founders & Enterprise Buyers**: Integrate TalentProof to eliminate hiring spam and automate technical contract verification.
-- **Engineers & Contributors**: Submit pull requests, star the repository, and join our global builder network.
+Licensed under the [Apache 2.0 License](LICENSE). Pull requests and issue submissions are welcome.
 
-Maintainer: **[Aamir Zameer (Az.)](https://github.com/Amz34)**  
-LinkedIn: [Aamir Zameer](https://www.linkedin.com/in/aamirzameer/)
+Maintainer: [Aamir Zameer (Az.)](https://github.com/Amz34) &bull; [LinkedIn](https://www.linkedin.com/in/aamirzameer/)
