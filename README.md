@@ -158,3 +158,7 @@ All 5 core suites pass deterministically.
 Licensed under the [Apache 2.0 License](LICENSE). Pull requests and issue submissions are welcome.
 
 Maintainer: [Aamir Zameer (Az.)](https://github.com/Amz34) &bull; [LinkedIn](https://www.linkedin.com/in/aamirzameer/)
+
+---
+
+Part of [my always-on agent stack](https://github.com/Amz34) · [Awesome Agent Infrastructure](https://github.com/Amz34/awesome-agent-infrastructure) (135 live-checked building blocks).
